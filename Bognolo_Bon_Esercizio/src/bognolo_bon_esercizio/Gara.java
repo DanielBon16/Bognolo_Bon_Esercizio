@@ -3,13 +3,22 @@ package bognolo_bon_esercizio;
 public class Gara {
     protected int data;
     protected int oraInizio;
-    protected String pisteDisponibili[];
+    protected Pista pisteDisponibili[];
     protected String atleti[];
 
-    public Gara() {
+    public Gara(){
+        
+        Pista p1=new Pista(1,"Buono",3,2);
+        Pista p2=new Pista(2,"Medio",3.2,3);
+        Pista p3=new Pista(3,"Male",6,1);
+        pisteDisponibili=new Pista[3];
+        
+            pisteDisponibili[0]=p1;
+            pisteDisponibili[1]=p2;
+            pisteDisponibili[2]=p3;
     }
 
-    public Gara(int data, int oraInizio, String[] pisteDisponibili, String[] atleti) {
+    public Gara(int data, int oraInizio, Pista[] pisteDisponibili, String[] atleti) {
         this.data = data;
         this.oraInizio = oraInizio;
         this.pisteDisponibili = pisteDisponibili;
@@ -52,5 +61,5 @@ public class Gara {
     public String toString() {
         return "la gara di data " + data + "è iniziata " + oraInizio;
     }
-    //commento
+    
 }

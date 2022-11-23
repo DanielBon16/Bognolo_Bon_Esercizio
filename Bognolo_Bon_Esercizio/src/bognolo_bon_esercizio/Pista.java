@@ -49,6 +49,4 @@ public class Pista {
     public void setnCorsie(int nCorsie) {
         this.nCorsie = nCorsie;
     }
-    
-    //qwertyuiop
 }
